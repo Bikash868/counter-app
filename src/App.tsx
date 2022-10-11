@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useState} from 'react';
 import './App.css';
+import Counter from './Counter'
+import TimerInput from './TimerInput';
+import useStore from './Store'
 
 function App() {
+  const minute = useStore((state:any) => state.minute)
+  const second = useStore((state:any) => state.second)
+  const counter = useStore((state:any) => state.counter)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{display:'flex',flexDirection:'column'}}>
+      <TimerInput/>
+      <Counter
+        minute = {minute}
+        second = {second}
+        counter = {counter}
+      />
     </div>
   );
 }
