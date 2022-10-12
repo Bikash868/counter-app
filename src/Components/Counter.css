@@ -3,7 +3,7 @@
     margin: 0 auto;
     display: grid;
     place-items: center;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     background: rgb(66, 4, 53);
     padding: 3rem 5rem;
     border-radius: 10px;

@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import './App.css';
-import Counter from './Counter'
-import TimerInput from './TimerInput';
+import Counter from './Components/Counter'
+import TimerInput from './Components/TimerInput';
 import useStore from './Store'
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   const counter = useStore((state:any) => state.counter)
 
   return (
-    <div className="App" style={{display:'flex',flexDirection:'column'}}>
+    <div className="App" style={{display:'flex',flexDirection:'column',rowGap:'0px',justifyContent:'center',padding:'1rem 5rem'}}>
       <TimerInput/>
       <Counter
         minute = {minute}
